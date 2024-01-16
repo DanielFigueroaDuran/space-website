@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unknown-property */
+import { useEffect } from "react";
 import bgVideo from "../assets/video/earth-bg.mp4";
 import Banner from "../components/banner/Banner";
 import Banner2 from "../components/banner/Banner2";
@@ -6,8 +7,17 @@ import Footer from "../components/footer/Footer";
 import Hero from "../components/hero/Hero";
 import Navbar from "../components/navbar/Navbar";
 import Services from "../components/services/Services";
+import AOS from "aos";
+import "aos/dist/aos.css"
 
 const LandingPage = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1200,
+            easing: "ease-in-out",
+        });
+    });
     return (
         <div>
             <div className="h-[700px] relative">

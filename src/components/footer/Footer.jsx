@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom"
 import { HiLocationMarker } from "react-icons/hi"
-import { MdMessage, MdCall } from "react-icons/md";
+import { MdOutlineMail, MdCall } from "react-icons/md";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <div className="bg-gray-800 text-white px-5">
+        <div className="bg-gray-800 text-white px-5 relative z-50">
             <section className="max-w-[1200px] mx-auto text-white">
                 <div className="grid md:grid-cols-3 py-5">
                     {/* first col */}
@@ -67,21 +68,43 @@ const Footer = () => {
 
                         <div>
                             <div className="py-8 px-4">
-                                <h1 className="text-xl font-bold mb-3">Contact Us</h1>
+                                <h1 className="text-xl font-bold mb-2">Contact Us</h1>
                             </div>
-                            <div className=" flex items-center gap-2">
-                                <HiLocationMarker />
-                                <p>Noida, Uttar Pradesh</p>
-                            </div>
-                            <div className=" flex items-center gap-3 mt-3">
-                                <MdMessage />
-                                <p>figueroaduran@gmail.com</p>
-                            </div>
-                            <div className=" flex items-center gap-3 mt-3">
-                                <MdCall />
-                                <p>+34 641625278</p>
+                            <div className="space-y-3">
+                                <div className=" flex items-center gap-2">
+                                    <HiLocationMarker />
+                                    <p>Noida, Uttar Pradesh</p>
+                                </div>
+                                <div className=" flex items-center gap-3 mt-3">
+                                    < MdOutlineMail />
+                                    <p>figueroa@gmail.com</p>
+                                </div>
+                                <div className=" flex items-center gap-3 mt-3">
+                                    <MdCall />
+                                    <p>+34 641625278</p>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                {/* bottom section */}
+                <div className="hidden sm:block ">
+                    <div className="flex justify-between items-center py-6 border-t-2 border-gray-400 ">
+                        <span className="text-sm text-gray-400">
+                            copyright  &copy; 2024 by DF
+                        </span>
+                        <div className="flex justify-center items-center gap-4 pb-4">
+                            <Link to="#"><FaInstagram className="text-4xl" /></Link>
+                            <Link to="#"><FaFacebook className="text-4xl" /></Link>
+                            <Link to="#"><FaLinkedin className="text-4xl" /></Link>
+                        </div>
+                        <span className="text-sm text-gray-400">
+                            <ul className="flex gap-3">
+                                <li>Privacy Policy</li>
+                                <li>Terms & Conditions</li>
+                            </ul>
+                        </span>
                     </div>
                 </div>
             </section>
